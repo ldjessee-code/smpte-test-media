@@ -1,0 +1,29 @@
+# SMPTE Test Media — configuration
+# Copy to test-media.conf and edit (test-media.conf is gitignored).
+#
+#   cp test-media.conf.example test-media.conf
+#
+# Command-line output path still overrides these values when provided:
+#   ./generate_test_media.sh /custom/path
+
+# H.264 suite output directory (generate_test_media.sh)
+OUTPUT_DIR_H264="./output"
+
+# ProRes 422 HQ suite output directory (generate_test_media_prores_hd.sh)
+OUTPUT_DIR_PRORES="./output-prores-hd"
+
+# HEVC / H.265 HD suite (generate_test_media_hevc_hd.sh — PROTOTYPE / UNTESTED)
+OUTPUT_DIR_HEVC="./output-hevc-hd"
+# libx265 constant rate factor (lower = higher quality; typical 18–28)
+HEVC_CRF="23"
+# hevc_videotoolbox quality 0–100 (macOS only; used when libx265 unavailable)
+HEVC_VT_QUALITY="65"
+
+# ProRes script: H.264 fallback for random-noise stress clips
+#   auto   — try ProRes first; fall back to H.264 on prores_ks "Packet too small" (default)
+#   always — encode stress clips as near-lossless H.264 (skip ProRes for stress)
+#   never  — do not fall back; fail if ProRes encode fails
+PRORES_STRESS_H264_FALLBACK="auto"
+
+# Python seeded-noise helper (generate_test_media.py) — same as H.264 dir if unset
+# OUTPUT_DIR_PYTHON="./output"
