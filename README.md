@@ -1,4 +1,5 @@
 # SMPTE Test Media Generator
+<img width="1580" height="565" alt="smpte_bars_image" src="https://github.com/user-attachments/assets/1f95da49-93f8-4553-a8b5-905a3afce17b" />
 
 Generate **SMPTE color bars**, **line-up tones**, **motion loops**, and **encoder-stress patterns** for video QA — no external assets required. Built with [FFmpeg](https://ffmpeg.org/) `lavfi` filters.
 
