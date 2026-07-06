@@ -1,0 +1,29 @@
+# Local-only files (not for the public repo)
+test-media.conf
+PUBLISH.md
+
+# Generated media — never commit output
+output/
+output-prores-hd/
+output-hevc-hd/
+**/output/
+**/output-prores-hd/
+**/output-hevc-hd/
+
+*.mp4
+*.mov
+*.m4v
+*.mkv
+*.m4a
+*.wav
+
+# Seeded PNG stress sequences from generate_test_media.py
+**/static_*_noise_png*/
+**/frame_*.png
+
+# macOS / editor
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
