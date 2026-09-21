@@ -237,3 +237,14 @@ This project is released under the **[MIT License](LICENSE)**. You may use, modi
 ## Contributing
 
 Issues and PRs welcome: harden the HEVC prototype, 4K bars, 1 kHz tone, EBU PAL, Windows batch wrappers.
+
+### Custom-duration ProRes stress (4K / long)
+
+For TrueEyed Jack worst-case ladders (6s vs Pexels, 30s sustained):
+
+```bash
+./generate_stress_prores_custom.sh ./out --duration 6 --size 3840x2160 --mode color
+./generate_stress_prores_custom.sh ./out --duration 30 --size 3840x2160 --mode color
+```
+
+Uses `prores_videotoolbox` on macOS. Color mode = maximum entropy (hardest for HEVC).
